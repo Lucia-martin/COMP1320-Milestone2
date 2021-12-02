@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cardstyles.css">
+    <title>Document</title>
+  </head>
+  <body>
+
+<div class="split right">
+<div class="centered">
+<div class = "margin">
+<h1>Create your DevCard</h1> <br>
+<section class="container">
+<form action="/create" method="post">
+  <!-- 
+  checklist:
+  all inputs have to be inside form, with a name atrribute/key for them
+  form needs to be a method/request of POST
+  needs to have an action attribute that matches a function in index file, eg. "/create"
+   -->
+<input type="text" placeholder="Your Full Name" name="fullName"> <br>
+<input type="text" placeholder="About Me" name="aboutMe"> <br>
+
+<h3>Technologies You know:</h3>
+<section class="checkbox-container">
+<input type="checkbox" value="HTML" class="checkbox" name="knownTechnologies"> HTML
+<input type="checkbox" value="JS" class="checkbox" name="knownTechnologies"> JS
+<input type="checkbox" value="React" class="checkbox" name="knownTechnologies"> React 
+<input type="checkbox" value="CSS" class="checkbox" name="knownTechnologies"> CSS
+<input type="checkbox" value="Git" class="checkbox" name="knownTechnologies"> Git
+<input type="checkbox" value="Node.js" class="checkbox" name="knownTechnologies"> Node.js
+</section>
+<br>
+<input type="text" placeholder="Github URL" name="githubURL"> 
+<br>
+<input type="text" placeholder="Twitter URL" name="twitterURL">
+<br>
+<input type="text" placeholder="Favourite Books(Separate by comma)" name="favouriteBooks"> 
+<br>
+
+<input type="submit" value="Create Site"> 
+
+</form>
+</section>
+</div>
+</div>
+</div>
+<div class = "split left"></div>
+
+</body>
+</html>
+
+
