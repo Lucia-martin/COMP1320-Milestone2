@@ -62,7 +62,7 @@ app.get("/people/:id", (req, res) => {
     .then((data) => JSON.parse(data).users) //returns the array, how we access the users array
     .then((listOfUsers) => listOfUsers.find(user => user.id == id)) 
     // .then((userReturn) => console.log(userReturn))//return the value that passes conditional
-    .then(user => res.render(`homepage`, { users: user })) //this is hardcoded so it's not working rn
+    .then(user => res.render(`homepage`, { users: user })) 
   .catch((err) => console.log("there is an error in people/id " + err))
   //
 });
@@ -76,8 +76,3 @@ app.listen(PORT, () => {
 });
 
 
-//app.get people/id function has to work - somehow you need to get id from url !! - the parameters or something
-//lets say you have id,, you need to look up the database to see if theres a user with that id, 
-// so use fs.readfile ("database.json", 
-// "utf8").then(content => json.parse(content).users).then(users => users.find((user) => user.id =id)).then(foundUser 
-// => res.render("homepage", {user:foundUser})) <%= user.aboutMe %> to remove hard data with dynamic
